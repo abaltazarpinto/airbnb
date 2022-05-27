@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    width: 550px;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+
+}
+
+.logomMain {
+    height: 70px;
+    width: inherit;
+    box-shadow: 2em 2em 2em 2em ;
+}
+
+.logo {
+    width: 82px;
+    
+}
