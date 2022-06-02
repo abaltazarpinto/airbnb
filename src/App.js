@@ -1,21 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
 import React from "react"
-import "./style.css"; 
-import lista from "./img/lista_airbnb.png"; 
-import Logo from "./img/airbnb.png"; 
+import Navbar from "./Components/Navbar"
+import Hero from "./Components/Hero"
+import Card from "./Components/Card"
+import data from "./data"
+import './style.css'
 
-function App() {
-  return <>
-    <div className='nav'>
-      <div className='logomMain'> 
-        <img className='logo' src={Logo} /> 
+export default function App() {
+  const cards = data.map(item => {
+      return (
+          <Card
+              key={item.id}
+              {...item}
+              
+          />
+      )
+  })        
+  
+  return (
+      <div>
+          <Navbar />
+          <Hero />
+          <section className="cards-list">
+              {cards}
+          </section>
       </div>
-      <div className=''>
-        <img className='lista' src={lista} />
-      </div> 
-    </div>
-  </>;
+  )
 }
-
-export default App;
